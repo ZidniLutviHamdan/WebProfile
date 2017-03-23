@@ -1,0 +1,128 @@
+<html>
+<head>
+   <title>Form Pendaftaran</title>
+</head>
+<script language = "JavaScript">
+
+function validasi_input(form){
+  if (form.nama.value == ""){
+    alert("Nama masih kosong!");
+    form.nama.focus();
+    return (false);
+  }
+
+  if (form.username.value == ""){
+    alert("Username masih kosong!");
+    form.username.focus();
+    return (false);
+  }
+    if (form.password.value == ""){
+    alert("Password masih kosong!");
+    form.password.focus();
+    return (false);
+  }
+    if (form.alamat.value == ""){
+    alert("Alamat masih kosong!");
+    form.alamat.focus();
+    return (false);
+  }
+    if (form.email.value == ""){
+    alert("Email masih kosong!");
+    form.email.focus();
+    return (false);
+  }
+    if (form.pekerjaan.value == ""){
+    alert("Pekerjaan masih kosong!");
+    form.pekerjaan.focus();
+    return (false);
+  }
+return (true);
+}
+</script>
+<style>
+
+
+    body {
+        background-color: #557F7C;
+        min-height: 100vh;
+        width: auto;
+    }
+</style>
+<body>
+
+<h1 align="center" style="color: #fff"><br>Form Pendaftaran</h1>
+
+<form action="register.php" method="POST" onsubmit="return validasi_input(this)">
+<table align="center">
+    <tr> 
+        <td>Nama</td>
+        <td><input type="text" name="nama"></td>
+    </tr>
+    <tr >
+        <td>Username</td>
+        <td><input type="text" name="username"></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="password" name="password"></td>
+    </tr>
+    <tr>
+        <td>Hak Akses</td>
+        <td><select name="hakakses">
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Alamat</td>
+        <td>
+            <input type="text" name="alamat">
+        </td>
+    </tr>
+    <tr>
+        <td>Jenis Kelamin</td>
+        <td><select name="jk">
+            <option value="Laki-Laki">Laki-Laki</option>
+            <option value="Perempuan">Perempuan</option>
+            </select>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>
+            <input type="text" name="email">
+        </td>
+    </tr>
+    <tr>
+        <td>Pekerjaan</td>
+        <td>
+            <input type="text" name="pekerjaan">
+        </td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>
+            <select name =status>
+                <option value="menikah">Menikah</option>
+                <option value="belum_menikah">Belum Menikah</option>
+                <option value="lain_lain">Lainnya</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>NO HP</td>
+        <td>
+            <input type="text" name="nohp">
+        </td>
+    </tr>
+    <tr>
+    <td></td>
+        <td>
+            <input type="submit" name="Daftar" value="DAFTAR">
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function validasi_input(form){
+  if (form_admin.username.value == ""){
+    alert("Username masih kosong!");
+    form_admin.username.focus();
+    return (false);
+  }
+return (true);
+}
+</script>
+</head>
+<body>
+<form method="post" action="login2.html" onsubmit="return validasi_input(this)">
+<p>Username: <input name="username" type="text"></p>
+<p><input name="" type="submit" value="Submit"></p>
+
+
+</form>
+</body>
+</html>
